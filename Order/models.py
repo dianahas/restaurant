@@ -16,7 +16,7 @@ class Order(models.Model):
     phone = models.CharField(validators=[phone_regex],max_length = 15)
     adress = models.CharField(max_length = 200)
     id_menu = models.ForeignKey(Menu)
-    rating = models.IntegerField(default=0)
+    rating = models.FloatField(default=0)
     status = models.IntegerField(choices=STATUS_CHOICES, default=0)
 
     def __unicode__(self):

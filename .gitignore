@@ -1,5 +1,5 @@
 *.log
-*.pyc
+.pyc
 restaurant/local_settings.py
 static/admin
 static/rest_framework

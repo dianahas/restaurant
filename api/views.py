@@ -106,6 +106,7 @@ class orderByCode(APIView):
 class updateRating(APIView):
 
     def post(self, request, format=None):
+        #import ipdb; ipdb.set_trace()
         data = request.data["code"]
         if validateCode(data) == False:
             return Response(status=status.HTTP_400_BAD_REQUEST)
@@ -119,7 +120,7 @@ class updateRating(APIView):
             theRating = float(receivedRequest)
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)        
-        if theRating<=0 or theRating >5 : 
+        if theRating<0 or theRating >5 : 
             return Response(status=status.HTTP_400_BAD_REQUEST) 
         selectedOrder.rating = request.data["rating"]
         selectedOrder.status = 2

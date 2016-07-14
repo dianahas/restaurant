@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+import Meniu
 
 urlpatterns = [
 	url(r'^meniu/', include('Meniu.urls')),
 	url(r'^order/', include('Order.urls')),
     url(r'^api/', include('api.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^$', Meniu.views.get_name),
 ]
