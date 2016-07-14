@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}People@ assist - Menus{% endblock %}
+
+{% block para %}
+    <p> People@ assist - Menus </p>
+{% endblock para%}
+
+{% block content %}
+<table style="width:100%">
+  <tr>
+    <th>Data</th>
+    <th>Titlu</th>
+    <th>Actiuni</th>
+  </tr>
+
+{%for m in menu %}
+  <tr>
+    <td>{{m.datta}}</td>
+    <td>{{m.title}}</td>
+    <td> <a href = "{% url 'orders_by_menu' m.pk %}" > Vizualizare </a> </td>  
+  </tr>
+  {%endfor%}
+</table>
+
+{% endblock %}

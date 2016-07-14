@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}People@ assist - Menus{% endblock %}
+
+{% block para %}
+    <p> People@ assist - Menus </p>
+{% endblock %}
+
+{% block content %}
+ <h1> The menu selected 
+ <table style="width:100%">
+ <tr>
+    <th>Fel 1</th>
+    <th>Fel 2</th>
+    <th>Desert</th>
+ </tr>
+  <tr>
+    <td>{{n.fel1}}</td>
+    <td>{{n.fel2}}</td>
+    <td>{{n.desert}}</td>
+   
+  </tr>
+  </table>
+</h1>
+<table style="width:100%">
+  <tr>
+    <th>Nume</th>
+    <th>Adress</th>
+    <th>Phone</th>
+	  <th>Email</th>
+    <th>Rating</th>
+    <th>Status</th>
+    
+  </tr>
+
+{%for m in orders %}
+  <tr>
+    <td>{{m.name}}</td>
+    <td>{{m.adress}}</td> 
+    <td>{{m.phone}}</td> 
+    <td>{{m.email}}</td>    
+    <td>{{m.rating}}</td>
+    <td> <a href = "{% url 'order_sent' m.pk %}" > {{m.status}} </a> </td>  
+
+  </tr>
+  {%endfor%}
+</table>
+
+{% endblock %}

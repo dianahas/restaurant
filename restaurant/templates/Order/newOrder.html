@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="post">
+	{% csrf_token %}
+    <Label for="name">Nume: </Label>
+    {{ form.name }}
+
+    <Label for="email">Email: </Label>
+    {{ form.email }}
+
+    <Label for="phone">Phone: </Label>
+    {{ form.phone }}
+
+    <Label for="adress">Adresa: </Label>
+    {{ form.adress }}
+
+    <input type="submit" value="Submit"> </form>
+
+</form>
+
+{% endblock %}

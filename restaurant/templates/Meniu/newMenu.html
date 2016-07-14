@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{%for message in messages %}
+	{{ message }}
+{% endfor %}
+
+{% block content %}
+<form action="" method="post">
+	{% csrf_token %}
+    <Label for="title">Titlu: </Label>
+    {{ form.title }}
+
+    <Label for="datta">Data: </Label>
+    {{ form.datta }}
+
+    <Label for="fel1">Fel 1: </Label>
+    {{ form.fel1 }}
+
+    <Label for="fel2">Fel 2: </Label>
+    {{ form.fel2 }}
+
+    <Label for="desert">Desert: </Label>
+    {{ form.desert }}
+
+    <input type="submit" value="Submit"> </form>
+
+</form>
+
+{% endblock content%}
