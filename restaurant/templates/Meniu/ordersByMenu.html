@@ -7,68 +7,79 @@
 
 
 
-    {% block content %}
+{% block content %}
+
 <h1> The menu selected </h1>
 
 <div class="content--menu">
-<main class="page-content">
+
+  <main class="page-content">
     
     <section class="page page-register wrapper gradienttwo ">
-     <div class="content">
+
+      <div class="content">
+
     
-       <table class ="tableone">
+        <table class ="tableone">
          
-      <thead>
-        <tr>
-          <th>Fel</th>
-          <th>Fel2</th> 
-          <th>Desert</th>
-        </tr>
-        </thead>
-    {%for m in menu %}
-        <tbody>
-        <tr>
-         <td>{{n.fel1}}</td>
-         <td>{{n.fel2}}</td>
-         <td>{{n.desert}}</td>
+          <thead>
+            <tr>
+                <th>Fel</th>
+                <th>Fel2</th> 
+                <th>Desert</th>
+            </tr>
+          </thead>
+
+            {%for m in menu %}
+
+          <tbody>
+            <tr>
+                <td>{{n.fel1}}</td>
+                <td>{{n.fel2}}</td>
+                <td>{{n.desert}}</td>
          
-        </tr>
+            </tr>
         
-        </tbody>
+          </tbody>
+
+              {%endfor%}
+
+        </table>
+
+        <table class="tabletwo">
+          <tr>
+                <th>Nume</th>
+                <th>Adress</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Rating</th>
+                <th>Status</th>
+    
+          </tr>
+
+          {%for m in orders %}
+          <tr>
+                <td>{{m.name}}</td>
+                <td>{{m.adress}}</td> 
+                <td>{{m.phone}}</td> 
+                <td>{{m.email}}</td>    
+                <td>{{m.rating}}</td>
+                <td> <a href = "{% url 'order_sent' m.pk %}" > {{m.status}} </a> </td>  
+
+          </tr>
+
           {%endfor%}
-      </table>
 
-      <table class="tabletwo">
-  <tr>
-    <th>Nume</th>
-    <th>Adress</th>
-    <th>Phone</th>
-    <th>Email</th>
-    <th>Rating</th>
-    <th>Status</th>
-    
-  </tr>
-
-{%for m in orders %}
-  <tr>
-    <td>{{m.name}}</td>
-    <td>{{m.adress}}</td> 
-    <td>{{m.phone}}</td> 
-    <td>{{m.email}}</td>    
-    <td>{{m.rating}}</td>
-    <td> <a href = "{% url 'order_sent' m.pk %}" > {{m.status}} </a> </td>  
-
-  </tr>
-  {%endfor%}
-</table>
+        </table>
 
 
 
      </div>
-     </div>
-    
-     </section>
+
+    </section>
+
   </main><!-- /page content -->
 
 </div>  
+
 {% endblock %}

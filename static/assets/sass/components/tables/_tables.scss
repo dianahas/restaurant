@@ -17,7 +17,7 @@ thead,tbody {
 th {
 
 	color:white;
-	background-color: #56CF90;
+	background-color: #57CF90;
 	font-size:24px;
 	height:43px;
 }
@@ -74,13 +74,7 @@ th:nth-child(3) {
 .wrapper {
   	height:1090px; 
   	width:100%; 
-  	white-space:nowrap;
  	max-width:100%;
- 	margin-top:-90px;
- 	margin-bottom:130px;
-}
-.content {
-    overflow-x:auto;
-	overflow-y:hidden;
+
 }
 
