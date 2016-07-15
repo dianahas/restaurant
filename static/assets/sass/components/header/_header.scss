@@ -16,7 +16,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37C56D', end
     color:white;
     font-size:25px;
     width:100px;
-    white-space: nowrap;
+  
     
 }
 
@@ -34,7 +34,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37C56D', end
 .addlogo {
 	height:70px;
     max-width: 370px;
- 	width:357px;
+ 	width:100%;
  
 }
 
@@ -42,7 +42,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37C56D', end
 	
 	background-image:url('../images/mobileicon.png');
     width:60px;
-    max-width: 150px;
+    max-width: 350px;
     background-size:cover;
     height:60px;
     
