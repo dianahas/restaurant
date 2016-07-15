@@ -1,37 +1,53 @@
 {% extends 'base.html' %}
 
 {% block title %}People@ assist - Menus{% endblock %}
-
 {% block para %}
     <p> People@ assist - Menus </p>
 {% endblock %}
 
-{% block content %}
- <h1> The menu selected 
- <table style="width:100%">
- <tr>
-    <th>Fel 1</th>
-    <th>Fel 2</th>
-    <th>Desert</th>
- </tr>
+
+
+    {% block content %}
+<h1> The menu selected </h1>
+
+<div class="content--menu">
+<main class="page-content">
+    
+    <section class="page page-register wrapper gradienttwo ">
+     <div class="content">
+    
+       <table class ="tableone">
+         
+      <thead>
+        <tr>
+          <th>Fel</th>
+          <th>Fel2</th> 
+          <th>Desert</th>
+        </tr>
+        </thead>
+    {%for m in menu %}
+        <tbody>
+        <tr>
+         <td>{{n.fel1}}</td>
+         <td>{{n.fel2}}</td>
+         <td>{{n.desert}}</td>
+         
+        </tr>
+        
+        </tbody>
+          {%endfor%}
+      </table>
+
+      <table class="tabletwo">
   <tr>
-    <td>{{n.fel1}}</td>
-    <td>{{n.fel2}}</td>
-    <td>{{n.desert}}</td>
-   
-  </tr>
-  </table>
-</h1>
-<table style="width:100%">
-  <tr>
-    <th>Nume</th>
-    <th>Adress</th>
-    <th>Phone</th>
-	  <th>Email</th>
+    <th>Nume</th>
+    <th>Adress</th>
+    <th>Phone</th>
+    <th>Email</th>
     <th>Rating</th>
     <th>Status</th>
     
-  </tr>
+  </tr>
 
 {%for m in orders %}
   <tr>
@@ -46,4 +62,13 @@
   {%endfor%}
 </table>
 
+
+
+     </div>
+     </div>
+    
+     </section>
+  </main><!-- /page content -->
+
+</div>  
 {% endblock %}

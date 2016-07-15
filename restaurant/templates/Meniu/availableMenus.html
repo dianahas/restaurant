@@ -7,20 +7,40 @@
 {% endblock para%}
 
 {% block content %}
-<table style="width:100%">
-  <tr>
-    <th>Data</th>
-    <th>Titlu</th>
-    <th>Actiuni</th>
-  </tr>
+<div class="content--menu">
+<main class="page-content">
+    
+    <section class="page page-register wrapper gradienttwo ">
+     <div class="content">
+    
+       <table>
+         
+    
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Titlu</th> 
+          <th>Actiuni</th>
+        </tr>
+        </thead>
+    {%for m in menu %}
+        <tbody>
+        <tr>
+          <td>{{m.datta}}</td>
+          <td>{{m.title}}</td> 
+          <td><a class ="button--state-success form__button order__button stylizing" href = "{% url 'orders_by_menu' m.pk %}" > Vizualizare </a> 
+      </td>
+        </tr>
+        
+        </tbody>
+          {%endfor%}
+      </table>
+     </div>
+     </div>
+    
+     </section>
+  </main><!-- /page content -->
 
-{%for m in menu %}
-  <tr>
-    <td>{{m.datta}}</td>
-    <td>{{m.title}}</td>
-    <td> <a href = "{% url 'orders_by_menu' m.pk %}" > Vizualizare </a> </td>  
-  </tr>
-  {%endfor%}
-</table>
+ 
 
 {% endblock %}

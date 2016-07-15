@@ -1,22 +1,68 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action="" method="post">
-	{% csrf_token %}
-    <Label for="name">Nume: </Label>
-    {{ form.name }}
 
-    <Label for="email">Email: </Label>
-    {{ form.email }}
 
-    <Label for="phone">Phone: </Label>
-    {{ form.phone }}
+<div class="content--menu">
+  <main class="page-content">
+    <section class="page page-register gradienthree">
+    
+      <article class="card">
+        <form class="form" action="" method="post">
+           {% csrf_token %}
+          <div class="form__group">
+            <label class="form__label form__component">
+              Name
+            </label>
+            <input type="text"  id="id_name" maxlength="200" name="name"  class="form__input form__component js-form-input "  minlength="3"   required pattern="[A-Za-z]+" /> 
+           
+            {{ form.name }}
 
-    <Label for="adress">Adresa: </Label>
-    {{ form.adress }}
 
-    <input type="submit" value="Submit"> </form>
+          </div><!-- /form group -->
+    
+          <div class="form__group">
+            <label class="form__label form__component">
+              Email
+            </label>
+           <input type="email" id="id_email" maxlength="254" name="email" class="form__input form__component js-form-input" required pattern ="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" onfocusout="myFunction()"  />
+      
+              {{ form.email }}
+          </div><!-- /form group -->
+    
+    
+          <div class="form__group">
+            <label class="form__label form__component">
+              Phone Number
+            </label>
+         <input type="text" id="id_phone" maxlength="15" name="phone" class="form__input form__component js-form-input"  minlength="7" />
+         
 
-</form>
+          {{ form.phone }}
+          </div><!-- /form group -->
+    
+          <div class="form__group">
+            <label class="form__label form__component">
+              Address
+            </label>
+            <input type="text"  id="id_adress" maxlength="200" name="adress"  class="form__input form__component js-form-input" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{5,12}$"  minlength ="6"  />
+            
+
+              {{ form.adress }}
+              <div id ="contact_submit">
+            <button type="submit" class="form__button"  >Send
+            </button>
+    </div>
+          </div><!-- /form group -->
+    
+         
+    
+        </form>
+
+      </article>
+    </section>
+  </main><!-- /page content -->
+
+</div>
 
 {% endblock %}
