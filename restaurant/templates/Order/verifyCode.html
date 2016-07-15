@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="post">
+	{% csrf_token %}
+   
+    <Label for="name">code: </Label>
+    {{ form.code }}
+
+    <input type="submit" value="Verify"> </form>
+
+</form>
+
+{% endblock %}

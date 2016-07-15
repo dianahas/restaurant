@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from .forms import MenuForm
 from django.contrib import messages
+import datetime 
 
 
 
@@ -37,11 +38,21 @@ def view_menu(request):
     menus = Menu.objects.all().order_by('datta')
     return render(request, 'Meniu/availableMenus.html', {'menu': menus})
 
+def view_daily_menus(request):
+    today = datetime.date.today()
+    menus = Menu.objects.all().filter(datta = today) 
+    return render(request, 'Meniu/dailyMenus.html', {'menu': menus})
+
 def getOrders(request,pk):
     orders = Order.objects.filter(id_menu__pk=pk)
     meniu = Menu.objects.get(pk=pk)
     return render(request, 'Meniu/ordersByMenu.html', {'n':meniu ,'orders': orders})
 
+# def makeNewOrder(request,pk):
+
+#     orders = Order.objects.filter(id_menu__pk=pk)
+#     meniu = Menu.objects.get(pk=pk)
+#     return render(request, 'Meniu/ordersByMenu.html', {'n':meniu ,'orders': orders})
 
 
 

@@ -58,8 +58,14 @@ class OrderList(APIView):
         #import ipdb; ipdb.set_trace()
         orders = Order.objects.all()
         data = request.data
-        name = data["name"]
-        adress = data["adress"]
+        try:
+            name = data["name"]
+            adress = data["adress"]
+            idMeniu = data["id_menu"]
+            theRating = data["rating"]
+            theStatus = data["status"]
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
         if validateString(name) == False:
             return Response(status=status.HTTP_400_BAD_REQUEST)
         if validateString(adress) == False:
@@ -91,7 +97,12 @@ class orderByCode(APIView):
     
     def post(self, request, format=None):
         #import ipdb; ipdb.set_trace()
-        receivedData = request.data["code"]
+        data = request.data
+        try:
+            receivedData = data["code"]
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        # receivedData = request.data["code"]
         if validateCode(receivedData) == False:
             return Response(status=status.HTTP_400_BAD_REQUEST)
         tup = validateCode(receivedData)
@@ -107,12 +118,17 @@ class updateRating(APIView):
 
     def post(self, request, format=None):
         #import ipdb; ipdb.set_trace()
-        data = request.data["code"]
+        try:
+            data = request.data["code"]
+            receivedRequest = request.data["rating"]
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        # data = request.data["code"]
         if validateCode(data) == False:
             return Response(status=status.HTTP_400_BAD_REQUEST)
         tup = validateCode(data)
         codOrder = tup[1]
-        receivedRequest = request.data["rating"]
+        # receivedRequest = request.data["rating"]
         selectedOrder = Order.objects.get(pk=codOrder)
         if selectedOrder.status == 2:
             return Response(status=status.HTTP_400_BAD_REQUEST)   

@@ -18,6 +18,10 @@ class MenuForm(ModelForm):
     def clean(self):
         cleaned_data = super(MenuForm, self).clean()
         datta = cleaned_data.get('datta')
+        title = cleaned_data.get('title')
+        fel1 = cleaned_data.get('fel1')
+        fel2 = cleaned_data.get('fel2')
+        desert = cleaned_data.get('desert')
 
     def clean_datta(self):
         datta = self.cleaned_data.get('datta')
