@@ -28,7 +28,7 @@ def get_order(request):
 
         form = OrderForm()
 
-    return render(request, 'Meniu/newOrder.html', {'form': form})
+    return render(request, 'Order/newOrder.html', {'form': form})
 
 def updateStatus(request,pk):
     # import ipdb; ipdb.set_trace()

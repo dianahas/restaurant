@@ -3,26 +3,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <title>{% block title %} <p> People@ assist </p> {% endblock %}</title>
-    {% block para %}
-    <p> People@ assist </p>
-    {% endblock %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+  
+    <title>People @ASSIST</title>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="{% static 'dist/assets/css/app.css' %}">
 </head>
 
-<body class = "test">
-   <!--  <div id="sidebar">
-        {% block sidebar %}
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog/">Blog</a></li>
-        </ul>
-        {% endblock %}
-    </div> -->
+<body>
 
-    <div id="content">
-        {% block content %}{% endblock %}
-    </div>
+<div class = "menu">
+<div class ="alignment"> 
+<a class ="addlogo" href="register.html"></a>
+<div class="dropdown">
+
+<button class="dropbtn"><div class="assistlogo"></div></button>
+
+
+  <div class="dropdown-content">
+      <a href="http://localhost:8000/order/">Register</a>
+      <a href="http://localhost:8000/meniu/">Add Menu</a>
+      <a href="http://localhost:8000/meniu/view-menu/">View orders</a>
+     
+      <a href="signout.html">Sign out</a>
+  </div>
+
+</div>
+
+</div>
+
+  <div class="usermenu">
+  <p class="accountwelcome">Hello, David Alexandr</p>
+  <div class="imageacc"></div>
+  </div>
+<div class="menu-content">
+      <a href="http://localhost:8000/order/"> Register </a>
+      <a href="http://localhost:8000/meniu/">Add Menu</a>
+      <a href="http://localhost:8000/meniu/view-menu/">View orders</a>
+      <a href="signout.html">Sign out</a>
+  </div>
+</div>
+
+
+
+
+  <script src="{% static 'dist/assets/js/app.js' %}"></script>
+<div class="content--menu">
+{% block content %}
+ {% endblock %}
+</div>       
+   
 </body>
+
+
+<footer>
+<p class="copyright">  Copyright 2016. The Archers</p></div>
+
+</footer>
+
 </html>

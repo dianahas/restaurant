@@ -1,29 +1,74 @@
 {% extends 'base.html' %}
-
+{% load staticfiles %}
 {%for message in messages %}
-	{{ message }}
+    {{ message }}
 {% endfor %}
 
 {% block content %}
-<form action="" method="post">
-	{% csrf_token %}
-    <Label for="title">Titlu: </Label>
-    {{ form.title }}
 
-    <Label for="datta">Data: </Label>
-    {{ form.datta }}
 
-    <Label for="fel1">Fel 1: </Label>
-    {{ form.fel1 }}
+<div class = "content--menu">
+ <main class="page-content">
+    
+    
+    <section class="page page-register gradientone">
+    
+      <article class="card">
+        <form class="form" action="" method="post">
+             {% csrf_token %}
+          <div class="form__group">
+            <input type="text" id="id_title" maxlength="200" name="title"  class="form__input form__component form__inputformtwo" placeholder="Titlu">
+                     
+          </div><!-- /form group -->
+    
+          <div class="form__group">
+            <input type="text" id="id_datta" name="datta" class="form__input form__component form__inputformtwo" placeholder="Data">
 
-    <Label for="fel2">Fel 2: </Label>
-    {{ form.fel2 }}
+          
 
-    <Label for="desert">Desert: </Label>
-    {{ form.desert }}
+          </div><!-- /form group -->
+ 
+          <div class="form__group">
+            <input type="text" id="id_fel1" maxlength="200" name="fel1"  class="form__input form__component form__inputformtwo" placeholder="Felul I">
 
-    <input type="submit" value="Submit"> </form>
 
-</form>
+     
 
-{% endblock content%}
+          </div><!-- /form group -->
+
+            <div class="form__group">
+            <input type="text" id="id_fel2" maxlength="200" name="fel2" class="form__input form__component  form__inputformtwo" placeholder="Felul II">
+            
+          </div><!-- /form group -->
+
+          <div class="form__group">
+            <input type="text" id="id_desert" maxlength="200" name="desert"  class="form__input form__component form__inputformtwo" placeholder="Felul III">
+              
+            <button type="submit" class="form__button">Send
+            </button>
+          </div><!-- /form group -->
+    
+    
+        </form>
+      
+      </article>
+    
+    </section>
+    
+    
+ 
+  </main><!-- /page content -->
+
+</div>
+
+
+
+
+  {% endblock content%}
+
+
+
+ 
+   
+   
+
