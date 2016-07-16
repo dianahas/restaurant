@@ -3,21 +3,19 @@ table {
    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    width:1168px;
    overflow-y:scroll;
-   height: 988px;
-   margin-bottom:90px;
-   padding-bottom: 50px;
+   height: 991px;
    
 }
 
 thead,tbody {
-  	max-width:580px; 
+  	max-width:540px; 
 
 } 
 
 th {
 
 	color:white;
-	background-color: #57CF90;
+	background-color: #56CF90;
 	font-size:24px;
 	height:43px;
 }
@@ -60,9 +58,8 @@ th {
 
 
 th:nth-child(2) {
-	
+
 	border-right:none;
-	width:520px;
 }
 
 th:nth-child(3) {
@@ -72,9 +69,32 @@ th:nth-child(3) {
 
 
 .wrapper {
-  	height:1090px; 
+  	height:1250px; 
   	width:100%; 
+  	white-space:nowrap;
  	max-width:100%;
+}
+.content {
+    overflow-x:auto;
+	overflow-y:hidden;
+}
+
+.tableone
+{
+	width:800px;
+	height:600px;
 
 }
 
+table.tableone th {
+	width:300px;
+}
+
+table.tableone td {
+	
+}
+
+.tabletwo{
+	width:800px;
+	height:600px;
+}
