@@ -35,10 +35,11 @@ class codeForm(forms.Form):
     code = forms.CharField(label='code', max_length=100)
 
     def clean_code(self):
+        #import ipdb; ipdb.set_trace()
         code = self.cleaned_data.get('code')
         if validateString(code) == False:
             raise forms.ValidationError("invalid date")
-        cod = string.split("-")
+        cod = code.split("-")
         if len(cod) != 2:
             raise forms.ValidationError("invalid date")
         try:

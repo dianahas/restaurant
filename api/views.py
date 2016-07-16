@@ -83,7 +83,7 @@ class OrderList(APIView):
         if serializer.is_valid():
             serializer.save()
 
-            subject = "Order confirmation"
+            subject = "Order confirmation Restaurant Archers"
             mail = data["email"]
             menu_code = str(data["id_menu"]) + "-"
             orderr = Order.objects.last()
