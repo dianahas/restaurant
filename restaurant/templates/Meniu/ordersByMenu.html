@@ -66,9 +66,23 @@
                 <td>{{m.name}}</td>
                 <td>{{m.adress}}</td> 
                 <td>{{m.phone}}</td> 
-                <td>{{m.ema0il}}</td>    
-                <td>{{m.rating}}</td>
-                <td> <a href = "{% url 'order_sent' m.pk %}" > {{m.status}} </a> </td>  
+                <td>{{m.email}}</td>  
+                <td>{{m.rating}}</td> 
+             
+                     {% ifequal 0 m.status %}  
+                     <td> <a href = "{% url 'order_sent' m.pk %}" > 
+                      Send</a> </td> 
+                 {%endifequal%} 
+
+
+                
+               
+                  {% ifequal 1 m.status %}  
+                      <td> 
+                      Sent</a> </td> 
+
+                 {%endifequal%} 
+                 </a> </td>  
 
           </tr>
           

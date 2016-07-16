@@ -32,7 +32,21 @@
                 <td>{{m.fel1}}</td>
                 <td>{{m.fel2}}</td>
                 <td>{{m.desert}}</td>
-         		 <td>  {{c.status}} </td>  
+               {% ifequal 0 c.status %}  
+                     <td> 
+                      Pending </td> 
+                 {%endifequal%} 
+
+
+                
+               
+                  {% ifequal 1 c.status %}  
+                      <td> 
+                      Sent </td> 
+
+                 {%endifequal%} 
+           
+         	
             </tr>
         	
           </tbody>
