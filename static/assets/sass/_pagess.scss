@@ -1,0 +1,565 @@
+
+
+//BUTTONS
+.form__button {
+    display: block;
+    margin: 10px;
+    margin-top: 60px;
+}
+.button--state-success {
+    margin-top: 34px;
+    margin-bottom: 35px;
+    text-align: center;
+    border-radius: 9px;
+}
+
+.addbtn {
+    margin-top: 48px;
+    margin-bottom: 145px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 32px;
+    text-align: center;
+}
+
+//MENU
+
+.menu {
+    position: fixed;
+    margin-top: -20px;
+    margin-left: -2px;
+}
+
+.mlabel {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    vertical-align: bottom;
+}
+
+
+.alignment {
+    padding-top: 23px;
+    padding-left: 23px;
+    text-align: left;
+    margin-top:22px;
+}
+
+
+
+.menu{
+    position: fixed;
+    margin-top: -20px;
+    margin-left: -2px;
+    z-index:20;
+    top:0px;
+    left:0;
+    display:block;
+}
+
+//FOOTER
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index:20;
+}
+.copyright {
+    margin-top: 18px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+
+//TABLE
+
+
+table {
+  
+    margin:0 auto;
+}
+
+table::-webkit-scrollbar {
+    background-color: #fff;
+&-thumb {
+background-color: #56CF90;
+&:hover {
+background-color: #56CF90;
+}
+}
+}
+
+
+
+
+
+
+tr {
+    text-align: center;
+}
+
+
+th {
+    text-align: center;
+}
+
+td:first-child {
+    padding-left: 74px;
+}
+
+td:nth-child(2) {
+    padding-left: 127px;
+}
+
+td:nth-child(3) {
+    padding-left: 111px;
+
+    text-align: justify;
+}
+
+
+th {
+    text-align: justify;
+}
+
+
+th:first-child {
+    padding-left: 113px;
+}
+
+th:nth-child(2) {
+    padding-left: 175px;
+}
+
+
+th:nth-child(3) {
+    padding-left: 212px;
+}
+
+
+.wrapper {
+    margin-bottom:50px;
+    text-align: center;
+}
+
+.content {
+    margin-left: 20px;
+    margin-right: 12px;
+    margin-top:160px;
+}
+// register page
+
+.page-register {
+    position: relative;
+
+}
+
+.page-register .card {
+    margin-top: 50px;
+}
+
+.page-register {
+    position: relative;
+    z-index: 1;
+    background-image: url('/static/assets/images/sasa.jpeg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-top:70px;
+    padding-bottom:100px;
+}
+
+.page-register:before {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    opacity: .3 ;
+    background: rgb(242,245,246); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=1 ); /* IE6-9 */
+
+}
+
+// addmenu page
+.page-register > * {
+    position: relative;
+    z-index: 10;
+}
+
+// BACKGROUND  ADDMENU.HTML
+
+.gradientone {
+    position: relative;
+
+}
+
+.gradientone {
+    position: relative;
+    z-index: 1;
+
+    background-image: url('/static/assets/images/meniu1.jpeg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-top:70px;
+    padding-bottom:100px;
+}
+
+.gradientone:before {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+    opacity: .3 ;
+        //colorzilla.com/gradient-editor/#72aa00+51,bfd255+86,9ecb2d+100 */
+    background: rgb(242,245,246); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=1 ); /* IE6-9 */
+
+}
+
+//BACKGROUND GRADIENT ORDERVISUALIZATION.HTML
+
+.gradienttwo {
+    position: relative;
+
+}
+
+.gradienttwo {
+    position: relative;
+    z-index: 1;
+
+    background-image: url('/static/assets/images/desert.jpeg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-top:70px;
+    padding-bottom:100px;
+}
+
+.gradientwo:before {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+    opacity: .3 ;
+        //colorzilla.com/gradient-editor/#72aa00+51,bfd255+86,9ecb2d+100 */
+    background: rgb(242,245,246); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=1 ); /* IE6-9 */
+
+}
+
+// GRADIENT BACKGROUND REGISTER.HTML
+
+.gradientthree {
+    position: relative;
+
+}
+
+.gradientthree {
+    position: relative;
+    z-index: 1;
+
+    background-image: url('/static/assets/images/sasa.jpeg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-top:70px;
+    padding-bottom:100px;
+}
+ 
+.gradientthree:before {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+    opacity: .8 ;
+        //colorzilla.com/gradient-editor/#72aa00+51,bfd255+86,9ecb2d+100 */
+    background: rgb(242,245,246); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=1 ); /* IE6-9 */
+
+}
+
+@media all and (max-width: 875px) {
+   .accountwelcome {
+        display: none !important;
+    
+    } 
+
+    .imageacc {
+        margin-left:66px;
+         margin-top:-35px;
+    }
+
+    .addlogo {
+        padding-left:30px;
+    }
+   
+}
+
+@media all  and (max-width:1375px) {
+    .menu-content  {
+        display:none !important;
+    }
+
+}
+
+
+@media all and (min-width:785px ) {
+    .dropdown {
+        display:none;
+    } 
+}
+// form validation
+.alignment {
+    padding-top:2px;
+    }
+
+
+@media all and (min-width:890px ) and (max-width:1000px) {
+    .menu-content {
+        display:none !important;
+    } 
+}
+// form va
+
+@media only screen and (max-width: 1374px) {
+    .addlogo {
+        max-width:330px;
+        height:70px;
+        margin-left:20px;
+    }
+
+
+    .imageacc {
+        position:fixed;
+        margin-top:-50px;
+        
+        right:30px;
+        width:200px;
+        height:100px;
+
+    }
+
+    .dropdown{
+        display:block !important;
+    }
+
+
+
+}
+
+
+//FORM VALIDATION
+.error_show {
+    margin-left: 10px;
+}
+
+.error {
+    margin-left:10px;
+}
+
+// CARD
+.card {
+    margin: 0 auto;
+    padding: 20px;
+}
+//
+.alignment {
+    text-align:left;
+}
+
+// FORM
+.form {
+    margin-top:10px;
+    margin: 0 auto;
+}
+
+.form__group {
+    margin-bottom: 10px;
+}
+
+
+.form__component {
+    display: block;
+    margin-bottom: 19px;
+
+}
+
+.form__input {
+    padding: 20px;
+    margin-bottom:36px;
+}
+
+.form__inputformtwo {
+    margin-top:50px;
+}
+
+
+//header
+.accountwelcome {
+    margin-right:21px;
+    float:right;
+    padding-left:12 0px;
+    position:fixed;
+    white-space:nowrap;
+    vertical-align: baseline;
+
+}
+
+.imageacc {
+   
+    display:inline-block;
+    padding-left:24px;
+    height:83px;
+    width:100%;
+    max-width:110px;
+    float:right;
+    
+    margin-top:-10px;
+    content: url('/static/assets/images/Alexanders.png');
+}
+
+.usermenu {
+    text-align:center;
+    float:right;
+    padding-right:30px;
+    margin-top:7px;
+}
+.assistlogo {
+    float:left;
+    position:fixed;
+    z-index:1000; 
+    margin-top:14px;
+    vertical-align: baseline;
+    display:inline-block;
+   
+}
+
+.addlogo {
+    position:fixed;
+    content:url('/static/assets/images/logo.png');
+    z-index:1000; 
+    vertical-align: baseline;
+    padding-left:60px;
+    margin-top:16px;
+
+}
+
+
+// DEFAULT.HTML + DROP DOWN MENU
+.dropdown {
+    position: relative;
+    display: block;
+    margin-top :7px;
+    float:left;
+   
+}
+.dropdown-content {
+    padding-top:40px;
+    margin-top:61px;
+    display: none;
+
+}
+
+.dropdown-content a { 
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+}
+
+
+.menu-content a {
+    margin-right:10px;
+    display:inline;
+    padding:0 20px;
+}
+
+
+
+
+.wrapper {
+    white-space:nowrap;
+    margin-top:-90px;
+    margin-bottom:130px;
+}
+.content {
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+.dropbtn {
+    float:left;
+   
+}
+
+.stylizing
+{
+    padding-top:20px;
+}
+
+.menu-content
+{
+    margin:0 auto;
+    max-width:600px;
+    padding-top:30px;
+    text-align:center;
+}
+
+
+.tableone
+{
+
+display: inline-block;
+margin-bottom:50px;
+width:800px;
+height:700px;
+   
+}
+
+.tableone th {
+ margin-top:90px;
+}
+
+.tableone td:first-child {
+    padding:0;
+}
+
+.tabletwo {   
+   display: inline-table;
+    margin-bottom: 100px;
+}
+

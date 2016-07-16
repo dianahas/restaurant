@@ -11,14 +11,13 @@
 
 <h1> The menu selected </h1>
 
-<div class="content--menu">
 
   <main class="page-content">
     
     <section class="page page-register wrapper gradienttwo ">
+ <div class="content">
 
-      <div class="content">
-
+     
     
         <table class ="tableone">
          
@@ -30,8 +29,7 @@
             </tr>
           </thead>
 
-            {%for m in menu %}
-
+            
           <tbody>
             <tr>
                 <td>{{n.fel1}}</td>
@@ -42,11 +40,10 @@
         
           </tbody>
 
-              {%endfor%}
-
+             
         </table>
 
-        <table class="tabletwo">
+        <table class="tabletwo" >
           <tr>
                 <th>Nume</th>
                 <th>Adress</th>
@@ -72,14 +69,12 @@
 
         </table>
 
+      </section>
+
+    </main><!-- /page content -->
+
+  </div> 
 
 
-     </div>
-
-    </section>
-
-  </main><!-- /page content -->
-
-</div>  
 
 {% endblock %}
