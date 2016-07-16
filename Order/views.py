@@ -59,6 +59,7 @@ def get_code(request):
     return render(request, 'Order/verifyCode.html', {'form': form})
 
 def checkCode(request):
+    #import ipdb; ipdb.set_trace()
     data = request.data
     try:
         receivedData = data["code"]
