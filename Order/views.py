@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from .forms import *
 from django.contrib import messages
+from django.core.mail import send_mail
 from restaurant.utils import *
 
 # Create your views here.
@@ -16,6 +17,13 @@ def get_order(request, pk):
         form = newOrderForm(request.POST, id_menu=pk)
         if form.is_valid():
             form.save()
+            #import ipdb; ipdb.set_trace()
+            subject = "Order confirmation Restaurant Archers"
+            mail = form.data["email"]
+            menu_code = str(form.data["id_menu"]) + "-"
+            orderr = Order.objects.last()
+            menu_code += str(orderr.pk)
+            send_mail(subject, menu_code, "restaurantarchers@gmail.com", [mail])
             messages.success(request, 'Element added.')
             return redirect('view-daily')
         else:
