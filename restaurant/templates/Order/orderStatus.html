@@ -18,9 +18,11 @@
          
           <thead>
             <tr>
-                <th>Data</th>
-                <th>Titlu</th> 
-                <th>Actiuni</th>
+                <th>Fel 1</th>
+                <th>Fel 2</th> 
+                <th>Fel 3</th>
+                <th>Starea comenzii</th>
+                
             </tr>
           </thead>
 
@@ -30,7 +32,7 @@
                 <td>{{m.fel1}}</td>
                 <td>{{m.fel2}}</td>
                 <td>{{m.desert}}</td>
-         		 <td> <a href = "{% url 'orders_by_menu' m.pk %}" > Vizualizare </a> </td>  
+         		 <td> <a href = "{% url 'orders_by_menu' m.pk %}" > </a> </td>  
             </tr>
         		{{c.status}}
           </tbody>
