@@ -1,21 +1,50 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!-- <table style="width:100%">
-  <tr>
-    <th>Data</th>
-    <th>Titlu</th>
-    <th>Actiuni</th>
-  </tr> -->
 
-    {{m.fel1}}
-    {{m.fel2}}
-    {{m.desert}}
 
-    <!-- <td> <a href = "{% url 'orders_by_menu' m.pk %}" > Vizualizare </a> </td>  
-  </tr> -->
-{{c.status}}
-<!-- </table>
- -->
+
+<h1> The menu selected </h1>
+
+
+  <main class="page-content">
+    
+    <section class="page page-register wrapper default__gradient ">
+ <div class="content">
+
+     
+    
+        <table class ="tableone table__check__status">
+         
+          <thead>
+            <tr>
+                <th>Data</th>
+                <th>Titlu</th> 
+                <th>Actiuni</th>
+            </tr>
+          </thead>
+
+            
+          <tbody>
+            <tr>
+                <td>{{m.fel1}}</td>
+                <td>{{m.fel2}}</td>
+                <td>{{m.desert}}</td>
+         		 <td> <a href = "{% url 'orders_by_menu' m.pk %}" > Vizualizare </a> </td>  
+            </tr>
+        		{{c.status}}
+          </tbody>
+
+             
+        </table>
+
+       
+
+      </section>
+
+    </main><!-- /page content -->
+
+  </div> 
+
 
 {% endblock %}

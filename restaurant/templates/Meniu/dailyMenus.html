@@ -7,25 +7,61 @@
 {% endblock para%}
 
 {% block content %}
-  <table style="width:100%">
-    <tr>
-       <th>Titlu</th>
-	     <th>Fel 1</th>
-	     <th>Fel 2</th>
-	     <th>Desert</th>
-       <th>Comanda</th>
-    </tr>
+    
+  <main class="page-content">  
 
-      {%for m in menu %}
+<section class="page page-register wrapper default__gradient ">
+ <div class="content">
+ <div class = "wrapper__table__daily">
+    
+        <table class = "table__daily">
+         
+    
+          <thead>
+            <tr>
+               <th>Titlu</th>
+       <th>Fel 1</th>
+       <th>Fel 2</th>
+       <th>Desert</th>
+       <th>Comanda</th>
+            </tr>
+         </thead>
+
+    {%for m in menu %}
+       
+             <tbody>
     <tr>
-      <td>{{m.title}}</td>
+    <td>{{m.title}}</td>
       <td>{{m.fel1}}</td>
       <td>{{m.fel2}}</td>
       <td>{{m.desert}}</td>
       <td> <a href = "{% url 'get_order' m.pk %}" > Comanda </a> </td>  
     </tr>
-      {%endfor%}
+     
 
-  </table>
+        
+          </tbody>
+ {%endfor%}
+   
+
+        </table>
+</div>
+      </div>
+
+    </section>
+
+  </main>
+  
+</div>
+ 
+
+
+
+
+
+
+
+
+
 
 {% endblock %}
