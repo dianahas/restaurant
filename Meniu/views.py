@@ -46,12 +46,15 @@ def view_daily_menus(request):
 def getOrders(request,pk):
     #import ipdb; ipdb.set_trace()
     orders = Order.objects.filter(id_menu__pk=pk)
-    sumRating=0
-    for i in  orders:
-        sumRating += i.rating
-    nrOrders = len(orders)
-    averageRating = sumRating/nrOrders
     meniu = Menu.objects.get(pk=pk)
+    nrOrders = len(orders)
+    if nrOrders>0:
+        sumRating=0
+        for i in  orders:
+            sumRating += i.rating
+        averageRating = sumRating/nrOrders
+    else:
+        averageRating=0
     return render(request, 'Meniu/ordersByMenu.html', {'n':meniu ,'o':averageRating, 'orders': orders})
 
 
