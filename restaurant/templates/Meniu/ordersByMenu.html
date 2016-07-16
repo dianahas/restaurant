@@ -27,6 +27,7 @@
                 <th>Fel</th>
                 <th>Fel2</th> 
                 <th>Desert</th>
+                <th>Rating</th>
             </tr>
           </thead>
 
@@ -35,13 +36,13 @@
             <tr>
                 <td>{{n.fel1}}</td>
                 <td>{{n.fel2}}</td>
-                <td>{{n.desert}}</td>
-         
+                <td>{{n.desert}}</td>         
+                <td> {{o}} </td>
             </tr>
         
           </tbody>
 
-             
+
         </table>
 </div>
 </div>
@@ -66,7 +67,7 @@
                 <td>{{m.name}}</td>
                 <td>{{m.adress}}</td> 
                 <td>{{m.phone}}</td> 
-                <td>{{m.email}}</td>    
+                <td>{{m.ema0il}}</td>    
                 <td>{{m.rating}}</td>
                 <td> <a href = "{% url 'order_sent' m.pk %}" > {{m.status}} </a> </td>  
 

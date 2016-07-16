@@ -44,15 +44,20 @@ def view_daily_menus(request):
     return render(request, 'Meniu/dailyMenus.html', {'menu': menus})
 
 def getOrders(request,pk):
+    #import ipdb; ipdb.set_trace()
     orders = Order.objects.filter(id_menu__pk=pk)
     meniu = Menu.objects.get(pk=pk)
-    return render(request, 'Meniu/ordersByMenu.html', {'n':meniu ,'orders': orders})
+    nrOrders = len(orders)
+    if nrOrders>0:
+        sumRating=0
+        for i in  orders:
+            sumRating += i.rating
+        averageRating = sumRating/nrOrders
+    else:
+        averageRating=0
+    return render(request, 'Meniu/ordersByMenu.html', {'n':meniu ,'o':averageRating, 'orders': orders})
 
-# def makeNewOrder(request,pk):
 
-#     orders = Order.objects.filter(id_menu__pk=pk)
-#     meniu = Menu.objects.get(pk=pk)
-#     return render(request, 'Meniu/ordersByMenu.html', {'n':meniu ,'orders': orders})
 
 
 
