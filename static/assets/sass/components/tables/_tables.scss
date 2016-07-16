@@ -1,16 +1,12 @@
 table {
 
    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   width:1168px;
-   overflow-y:scroll;
-   height: 991px;
-   
+   min-width:900px;
+  
+  width:100%;
+
 }
 
-thead,tbody {
-  	max-width:540px; 
-
-} 
 
 th {
 
@@ -23,7 +19,6 @@ th {
 tr {
 
 	height:48px;
-	width:400px;
 	
 }
 
@@ -41,14 +36,14 @@ td:nth-child(2) {
 
 	font-size:26px;
 	border-right:none;
-	width:500px; 
+	
 
 }
 
 td:nth-child(3) {
 
 	font-size:26px;
-	width:500px;
+
 }
 
 th {
@@ -81,13 +76,13 @@ th:nth-child(3) {
 
 .tableone
 {
-	width:800px;
-	height:600px;
+	
+	
 
 }
 
 table.tableone th {
-	width:300px;
+	
 }
 
 table.tableone td {
@@ -95,6 +90,19 @@ table.tableone td {
 }
 
 .tabletwo{
-	width:800px;
-	height:600px;
+	
+	
+}
+
+.table__daily
+{	
+		
+	
+	
+
+}
+
+.table__view
+{
+	width:1168px;
 }

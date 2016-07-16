@@ -17,7 +17,8 @@
     <section class="page page-register wrapper gradienttwo ">
  <div class="content">
 
-     
+     <div class ="container__table">
+     <div class = "wrapper__table">
     
         <table class ="tableone">
          
@@ -42,8 +43,12 @@
 
              
         </table>
-
+</div>
+</div>
+ <div class ="container__table">
+ <div class = "wrapper__table">
         <table class="tabletwo" >
+        <thead>
           <tr>
                 <th>Nume</th>
                 <th>Adress</th>
@@ -53,8 +58,10 @@
                 <th>Status</th>
     
           </tr>
-
+          </thead>
+              <tbody>
           {%for m in orders %}
+
           <tr>
                 <td>{{m.name}}</td>
                 <td>{{m.adress}}</td> 
@@ -64,11 +71,12 @@
                 <td> <a href = "{% url 'order_sent' m.pk %}" > {{m.status}} </a> </td>  
 
           </tr>
-
+          
           {%endfor%}
-
+          </tbody>
         </table>
-
+</div>
+</div>
       </section>
 
     </main><!-- /page content -->

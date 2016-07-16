@@ -1,14 +1,42 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action="" method="post">
-	{% csrf_token %}
+
+
+<div class = "content--menu">
+  <main class="page-content">
+    <section class="page page-register gradientone">
+     <div class="content">
+
+      <article class="card">
+        <form class="form" action="" method="post">
+
+             {% csrf_token %}
+
+          <div class="form__group">
+
+  		 
+      
+          
+    
+    
+   			 <input class="form__input form__component form__inputformtwo" placeholder="Enter Code" id="id_code" maxlength="100" name="code" type="text">
+            <button type="submit"   class="form__button" >Verify</button>
+                     
+          </div>
    
-    <Label for="name">code: </Label>
-    {{ form.code }}
+    
+    
+        </form>
+      
+      </article>
+    
+    </section>
+    
+  </main>
 
-    <input type="submit" value="Verify"> </form>
+</div>
 
-</form>
+  {% endblock content%}
 
-{% endblock %}
+

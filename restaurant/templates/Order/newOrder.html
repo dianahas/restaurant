@@ -8,7 +8,7 @@
     <section class="page page-register gradienthree">
      <div class="content">
 
-      <article class="card">
+      <article class="card registration__card">
         <form class="form" action="" method="post">
            {% csrf_token %}
           <div class="form__group">
@@ -17,8 +17,7 @@
             </label>
             <input type="text"  id="id_name" maxlength="200" name="name"  class="form__input form__component js-form-input "  minlength="3"   required pattern="[A-Za-z]+" /> 
            
-            {{ form.name }}
-
+       
 
           </div><!-- /form group -->
     
@@ -28,22 +27,31 @@
             </label>
            <input type="email" id="id_email" maxlength="254" name="email" class="form__input form__component js-form-input" required pattern ="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" onfocusout="myFunction()"  />
       
-              {{ form.email }}
           </div><!-- /form group -->
     
-    
+    <div class="form__group">
+            
+      {{ form.id_menu }}
+</div>
+
+
           <div class="form__group">
             <label class="form__label form__component">
               Phone Number
             </label>
          <input type="text" id="id_phone" maxlength="15" name="phone" class="form__input form__component js-form-input"  minlength="7" />
 
-    {{ form.id_menu }}
-    <input type="submit" value="Submit"> </form>
+   
+    
 
-          {{ form.phone }}
           </div><!-- /form group -->
     
+
+
+
+
+
+
           <div class="form__group">
             <label class="form__label form__component">
               Address
@@ -51,7 +59,6 @@
             <input type="text"  id="id_adress" maxlength="200" name="adress"  class="form__input form__component js-form-input" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{5,12}$"  minlength ="6"  />
             
 
-              {{ form.adress }}
               <div id ="contact_submit">
             <button type="submit" class="form__button"  >Send
             </button>
