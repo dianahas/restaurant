@@ -11,14 +11,13 @@
 
 <h1> The menu selected </h1>
 
-<div class="content--menu">
 
   <main class="page-content">
     
     <section class="page page-register wrapper gradienttwo ">
+ <div class="content">
 
-      <div class="content">
-
+     
     
         <table class ="tableone">
          
@@ -31,6 +30,7 @@
             </tr>
           </thead>
 
+            
           <tbody>
             <tr>
                 <td>{{n.fel1}}</td>
@@ -41,9 +41,10 @@
         
           </tbody>
 
+
         </table>
 
-        <table class="tabletwo">
+        <table class="tabletwo" >
           <tr>
                 <th>Nume</th>
                 <th>Adress</th>
@@ -59,7 +60,7 @@
                 <td>{{m.name}}</td>
                 <td>{{m.adress}}</td> 
                 <td>{{m.phone}}</td> 
-                <td>{{m.email}}</td>    
+                <td>{{m.ema0il}}</td>    
                 <td>{{m.rating}}</td>
                 <td> <a href = "{% url 'order_sent' m.pk %}" > {{m.status}} </a> </td>  
 
@@ -69,14 +70,12 @@
 
         </table>
 
+      </section>
+
+    </main><!-- /page content -->
+
+  </div> 
 
 
-     </div>
-
-    </section>
-
-  </main><!-- /page content -->
-
-</div>  
 
 {% endblock %}
