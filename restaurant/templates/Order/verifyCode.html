@@ -2,41 +2,37 @@
 
 {% block content %}
 
+  <div class = "content--menu">
+    <main class="page-content">
+      <section class="page page-register gradient__ciorba">
+         <div class="content">
 
-<div class = "content--menu">
-  <main class="page-content">
-    <section class="page page-register gradientone">
-     <div class="content">
+            <article class="card card__verify">
+              <form class="form" action="" method="post">
 
-      <article class="card">
-        <form class="form" action="" method="post">
+                {% csrf_token %}
 
-             {% csrf_token %}
+                  <div class="form__group">
 
-          <div class="form__group">
-
-  		 
-      
-          
-    
-        
-   			 <input class="form__input form__component form__inputformtwo" placeholder="Enter Code" id="id_code" maxlength="100" name="code" type="text">
-            <button type="submit"   class="form__button" >Verify</button>
+   			            <input class="form__input form__component form__input__check
+                    form__verify__input" placeholder="Enter Code" id="id_code" maxlength="100" name="code" type="text">
+                    
+                    <button type="submit"   class="form__button form__button__verify" >Verifica</button>
                      
-          </div>
+                  </div>
    
     
     
-        </form>
+              </form>
       
-      </article>
+            </article>
     
-    </section>
+      </section>
     
-  </main>
+    </main>
 
-</div>
+  </div>
 
-  {% endblock content%}
+{% endblock content%}
 
 

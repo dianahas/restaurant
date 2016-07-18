@@ -4,63 +4,56 @@
 
 
 
-<h1> The menu selected </h1>
-
-
-  <main class="page-content">
+  <h1> The menu selected </h1>
+    <main class="page-content">
+      <section class="page page-register wrapper default__gradient ">
+        <div class="content">
+          <div class = "wrapper__table wrapper__menu">
     
-    <section class="page page-register wrapper default__gradient ">
- <div class="content">
-
-     
-    
-        <table class ="tableone table__check__status">
-         
-          <thead>
-            <tr>
-                <th>Fel 1</th>
-                <th>Fel 2</th> 
-                <th>Fel 3</th>
-                <th>Starea comenzii</th>
-                
-            </tr>
-          </thead>
+            <table class ="tableone table__check__status">
+              <thead>
+                <tr>
+                  <th>Fel 1</th>
+                  <th>Fel 2</th> 
+                  <th>Fel 3</th>
+                  <th>Starea comenzii</th>
+                </tr>
+              </thead>
 
             
-          <tbody>
-            <tr>
-                <td>{{m.fel1}}</td>
-                <td>{{m.fel2}}</td>
-                <td>{{m.desert}}</td>
-               {% ifequal 0 c.status %}  
-                     <td> 
-                      Pending </td> 
-                 {%endifequal%} 
+              <tbody>
+                <tr>
+                  <td>{{m.fel1}}</td>
+                  <td>{{m.fel2}}</td>
+                  <td>{{m.desert}}</td>
 
+                    {% ifequal 0 c.status %}  
 
-                
-               
-                  {% ifequal 1 c.status %}  
-                      <td> 
-                      Sent </td> 
+                  <td> Pending </td> 
+                      
+                    {%endifequal%} 
 
-                 {%endifequal%} 
-           
-         	
-            </tr>
+                    {% ifequal 1 c.status %} 
+
+                  <td> Sent </td> 
+
+                    {%endifequal%} 
+
+                    {% ifequal 2 c.status %} 
+
+                  <td> Sent </td> 
+
+                    {%endifequal%} 
+                </tr>
         	
-          </tbody>
+              </tbody>
+            </table>
 
-             
-        </table>
+          </div>
 
-       
-
+        </div>
       </section>
-
     </main><!-- /page content -->
-
-  </div> 
-
+  
 
 {% endblock %}

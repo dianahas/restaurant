@@ -9,59 +9,41 @@
 {% block content %}
     
   <main class="page-content">  
+    <section class="page page-register wrapper default__gradient ">
+      <div class="content">
+        <div class = "wrapper__table wrapper__menu">
+          <table class ="table__view">
+      
+            <thead>
+              <tr>
+                <th>Titlu</th>
+                <th>Fel 1</th>
+                <th>Fel 2</th>
+                <th>Desert</th>
+                <th>Comanda</th>
+              </tr>
+            </thead>
 
-<section class="page page-register wrapper default__gradient ">
- <div class="content">
- <div class = "wrapper__table__daily">
-    
-        <table class = "table__daily">
-         
-    
-          <thead>
-            <tr>
-               <th>Titlu</th>
-       <th>Fel 1</th>
-       <th>Fel 2</th>
-       <th>Desert</th>
-       <th>Comanda</th>
-            </tr>
-         </thead>
-
-    {%for m in menu %}
+          {%for m in menu %}
        
-             <tbody>
-    <tr>
-    <td>{{m.title}}</td>
-      <td>{{m.fel1}}</td>
-      <td>{{m.fel2}}</td>
-      <td>{{m.desert}}</td>
-      <td> <a href = "{% url 'get_order' m.pk %}" > Comanda </a> </td>  
-    </tr>
-     
+            <tbody>
+              <tr>
+                <td>{{m.title}}</td>
+                <td>{{m.fel1}}</td>
+                <td>{{m.fel2}}</td>
+                <td>{{m.desert}}</td>
+                <td> <a href="{% url 'get_order' m.pk %}" > Comanda </a> </td>
+              </tr>
+            </tbody>
 
-        
-          </tbody>
- {%endfor%}
-   
+          {%endfor%}
 
         </table>
-</div>
       </div>
-
-    </section>
-
-  </main>
-  
+    </div>
+  </section>
+</main>
 </div>
  
-
-
-
-
-
-
-
-
-
 
 {% endblock %}

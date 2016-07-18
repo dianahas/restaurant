@@ -9,94 +9,88 @@
 
 {% block content %}
 
-<h1> The menu selected </h1>
-
-
-  <main class="page-content">
+  <h1> The menu selected </h1>
+    <main class="page-content">
+      <section class="page page-register wrapper gradient__ciorba ">
+        <div class="content">
+          <div class ="container__table">
+            <div class = "wrapper__table">
     
-    <section class="page page-register wrapper gradienttwo ">
- <div class="content">
-
-     <div class ="container__table">
-     <div class = "wrapper__table">
-    
-        <table class ="tableone">
+              <table class ="tableone">
          
-          <thead>
-            <tr>
-                <th>Fel</th>
-                <th>Fel2</th> 
-                <th>Desert</th>
-                <th>Rating</th>
-            </tr>
-          </thead>
+                <thead>
+                  <tr>
+                    <th>Fel</th>
+                    <th>Fel2</th> 
+                    <th>Desert</th>
+                    <th>Rating</th>
+                  </tr>
+                </thead>
 
             
-          <tbody>
-            <tr>
-                <td>{{n.fel1}}</td>
-                <td>{{n.fel2}}</td>
-                <td>{{n.desert}}</td>         
-                <td> {{o}} </td>
-            </tr>
+                <tbody>
+                  <tr>
+                    <td>{{n.fel1}}</td>
+                    <td>{{n.fel2}}</td>
+                    <td>{{n.desert}}</td>         
+                    <td> {{o}} </td>
+                  </tr>
         
-          </tbody>
+                </tbody>
 
-        </table>
-</div>
-</div>
- <div class ="container__table">
- <div class = "wrapper__table">
-        <table class="tabletwo" >
-        <thead>
-          <tr>
-                <th>Nume</th>
-                <th>Adress</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Rating</th>
-                <th>Status</th>
-    
-          </tr>
-          </thead>
+              </table>
+            </div>
+        </div>
+      <div class ="container__table">
+        <div class = "wrapper__table">
+            <table class="tabletwo" >
+              <thead>
+                <tr>
+                  <th>Nume</th>
+                  <th>Adress</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>Rating</th>
+                  <th>Status</th>
+      
+                </tr>
+              </thead>
+
               <tbody>
-          {%for m in orders %}
 
-          <tr>
-                <td>{{m.name}}</td>
-                <td>{{m.adress}}</td> 
-                <td>{{m.phone}}</td> 
-                <td>{{m.email}}</td>  
-                <td>{{m.rating}}</td> 
+                {%for m in orders %}
+
+                  <tr>
+                    <td>{{m.name}}</td>
+                    <td>{{m.adress}}</td> 
+                    <td>{{m.phone}}</td> 
+                    <td>{{m.email}}</td>  
+                    <td><div class="rating"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div> {{m.rating}}</td> 
              
-                     {% ifequal 0 m.status %}  
-                     <td> <a href = "{% url 'order_sent' m.pk %}" > 
-                      Send</a> </td> 
-                 {%endifequal%} 
+                      {% ifequal 0 m.status %}  
 
+                    <td> <a href = "{% url 'order_sent' m.pk %}" > Send</a> </td> 
+                      {%endifequal%} 
 
-                
-               
-                  {% ifequal 1 m.status %}  
-                      <td> 
-                      Sent</a> </td> 
+                        {% ifequal 1 m.status %}  
+                    <td>  Sent </td> 
 
-                 {%endifequal%} 
-                 </a> </td>  
+                        {%endifequal%} 
 
-          </tr>
+                        {% ifequal 2 m.status %}  
+                    <td> Sent</td> 
+
+                        {%endifequal%} 
+                  </tr>
           
-          {%endfor%}
-          </tbody>
-        </table>
-</div>
-</div>
+                        {%endfor%}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
-
-    </main><!-- /page content -->
-
+    </main>
   </div> 
-
-
+  
 
 {% endblock %}
