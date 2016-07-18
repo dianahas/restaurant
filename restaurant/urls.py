@@ -18,8 +18,8 @@ from django.contrib import admin
 import Meniu
 
 urlpatterns = [
-	url(r'^meniu/', include('Meniu.urls')),
-	url(r'^order/', include('Order.urls')),
+	url(r'^meniu/', include('Meniu.urls', namespace="meniu")),
+	url(r'^order/', include('Order.urls', namespace="order")),
     url(r'^api/', include('api.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', Meniu.views.get_name),

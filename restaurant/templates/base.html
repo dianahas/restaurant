@@ -20,10 +20,13 @@
         <button class="dropdown__button"><div class="dropdown__menu"><p class="dropdown__menu-name" >Menus</p></div></button>
         <div class="dropdown__content">
           <a href="http://localhost:8000/meniu/">Add Menu</a>
+           <a href="{% url 'meniu:get_name'%}" ">Add Menu</a>
+               
+
           <a href="http://localhost:8000/meniu/view-menu/">View orders</a>
           <a href="http://localhost:8000/meniu/view-daily">Add Order</a>
           <a href="http://localhost:8000/order/check_code">Check order</a>
-        </div>
+        </div>  
       </div>
     </div>
 
