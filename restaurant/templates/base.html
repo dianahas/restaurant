@@ -15,17 +15,16 @@
 <body>
   <div class = "header">
     <div class ="alignment"> 
-      <a class ="header__img-logo" href="http://localhost:8000/meniu/"></a>
+      <a class ="header__img-logo" href="{% url 'meniu:get_name'%}"></a>
       <div class="header__dropdown dropdown">
         <button class="dropdown__button"><div class="dropdown__menu"><p class="dropdown__menu-name" >Menus</p></div></button>
         <div class="dropdown__content">
-          <a href="http://localhost:8000/meniu/">Add Menu</a>
-           <a href="{% url 'meniu:get_name'%}" ">Add Menu</a>
-               
-
-          <a href="http://localhost:8000/meniu/view-menu/">View orders</a>
-          <a href="http://localhost:8000/meniu/view-daily">Add Order</a>
-          <a href="http://localhost:8000/order/check_code">Check order</a>
+         
+          <a href="{% url 'meniu:get_name'%}" ">Add Menu</a>
+          <a href="{% url 'meniu:view-menu'%}">View orders</a>
+          <a href="{% url 'meniu:view-daily'%}">Add Order</a>
+          <a href="{% url 'order:check_code'%}">Check order</a>
+         
         </div>  
       </div>
     </div>

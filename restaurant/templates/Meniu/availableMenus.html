@@ -27,7 +27,7 @@
                 <tr>
                   <td>{{m.datta}}</td>
                   <td>{{m.title}}</td> 
-                  <td><a class ="button--state-success form__button form__order__button link--style" href = "{% url 'orders_by_menu' m.pk %}" > Vizualizare </a> </td>
+                  <td><a class ="button--state-success form__button form__order__button link--style" href = "{% url 'meniu:orders_by_menu' m.pk %}" > Vizualizare </a> </td>
                 </tr>     
 
                 {%endfor%}

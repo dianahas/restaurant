@@ -5,6 +5,8 @@ from Meniu.models import Menu
 from django.forms import ModelForm
 import datetime 
 
+
+#class for the add order form
 class newOrderForm(ModelForm):
     class Meta:
         model = Order
@@ -17,6 +19,7 @@ class newOrderForm(ModelForm):
         self.fields['id_menu'].initial = id_menu
         self.fields['id_menu'].widget = forms.HiddenInput()
 
+    #functions which ensure  that the input data is si valid, for the order form  
     def clean_name(self):
         name = self.cleaned_data.get('name')
         if validateString(name) == True:
@@ -29,11 +32,11 @@ class newOrderForm(ModelForm):
             return adress
         raise forms.ValidationError("invalid date")
 
-
+#class for the check code form
 class codeForm(forms.Form):
     # TODO: Define form fields here
     code = forms.CharField(label='code', max_length=100)
-
+#functions which ensure  that the input data - code is valid
     def clean_code(self):
         #import ipdb; ipdb.set_trace()
         code = self.cleaned_data.get('code')

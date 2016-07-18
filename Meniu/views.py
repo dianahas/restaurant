@@ -10,41 +10,42 @@ import datetime
 
 
 
-# Create your views here.
-
-def get_name(request):
-    
+# method used to add a menu
+def get_name(request):  
     if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
+        # create a Menu form instance and populate it with data from the request:
         form = MenuForm(request.POST)
         # check whether it's valid:
         if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
+            
+            #saving the created object 
             form.save()
+            #saves a message
             messages.success(request, 'Element added.')
-            return redirect('view-menu')
+            # redirect to a new URL:
+            return redirect('meniu:view-menu')  
         else:
             messages.error(request, 'Data is invalid.')
     # if a GET (or any other method) we'll create a blank form
     else:
 
         form = MenuForm()
-
+    #
     return render(request, 'Meniu/newMenu.html', {'form': form})
 
+# method used to return all the avaible menus
 def view_menu(request):
     menus = Menu.objects.all().order_by('datta')
     return render(request, 'Meniu/availableMenus.html', {'menu': menus})
 
+# method used to return the avaible menus for today 
 def view_daily_menus(request):
     today = datetime.date.today()
     menus = Menu.objects.all().filter(datta = today) 
     return render(request, 'Meniu/dailyMenus.html', {'menu': menus})
 
+# method used to return the menu and the average raiting, orders for it.
 def getOrders(request,pk):
-    #import ipdb; ipdb.set_trace()
     orders = Order.objects.filter(id_menu__pk=pk)
     meniu = Menu.objects.get(pk=pk)
     nrOrders = len(orders)

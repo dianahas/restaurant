@@ -4,6 +4,7 @@ from django.forms import ModelForm
 from restaurant.utils import validateString
 from Meniu.models import Menu
 
+#class for the add menu form
 class MenuForm(ModelForm):
     class Meta:
         model = Menu
@@ -15,6 +16,7 @@ class MenuForm(ModelForm):
         for key in self.fields:
             self.fields[key].required = True
      
+     #functions which ensure  that the input data is si valid, for the add menu form
     def clean(self):
         cleaned_data = super(MenuForm, self).clean()
         datta = cleaned_data.get('datta')
