@@ -2,13 +2,15 @@ from __future__ import unicode_literals
 from django.core.validators import RegexValidator
 from django.db import models
 from Meniu.models import Menu
-# Create your models here.
+
+
+#the possible status o an order.
 STATUS_CHOICES = (
     (0, "Pending"),
     (1, "Sent"),
     (2, "Finalized")
 )
-
+# Orde model
 class Order(models.Model):
     name = models.CharField(max_length = 200)
     email = models.EmailField()

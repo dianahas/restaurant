@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 from django.forms import ModelForm
 from django.db import models
 
-# Create your models here.
+# Menu model
 class Menu(models.Model):
     title = models.CharField(max_length = 200)
     datta = models.DateField('date published')

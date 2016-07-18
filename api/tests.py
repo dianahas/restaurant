@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-# Create your tests here.
+# some testing code.
 class TestUsers(TestCase):
     def setUp(self):
         self.client = APIClient()
@@ -14,9 +14,13 @@ class TestUsers(TestCase):
         self.client.logout()
         response = self.client.get('contacts')
         self.assertEqual(response.status_code, 404)
+
+
     def test_login(self):
         response = self.client.get('/api/users/details/')
         self.assertEqual(response.status_code, 200)
+
+
     def test_registration_phone_number_missing(self):
         request = self.factory.post(
         '/api/users/registration/phone-number/',
@@ -28,6 +32,8 @@ class TestUsers(TestCase):
         self.assertEqual(response.status_code, 400)
         self.assertEqual(response.reason_phrase, u'BAD REQUEST')
         self.assertEqual(response.data['details'], u'Expected phone number')
+
+        
     def test_validation_phone_number_missing_data(self):
         request = self.factory.post(
         '/api/users/validation/phone-number/',

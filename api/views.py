@@ -13,13 +13,14 @@ from django.core.mail import send_mail
 from restaurant.utils import *
 
 class MenuList(APIView):
-   
+    #returns the list of the avaible menus
     def get(self, request, format=None):
         today = datetime.date.today()
         menus = Menu.objects.all().filter(datta=today)
         serializer = MenuSerializer(menus, many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
 
+#operations whit the menu
 class MenuDetail(APIView):
 
     def get_object(self, pk):
@@ -54,8 +55,8 @@ class OrderList(APIView):
         serializer = OrderSerializer(orders, many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
 
+#adds new order  and sends the email.
     def post(self, request, format=None):
-        #import ipdb; ipdb.set_trace()
         orders = Order.objects.all()
         data = request.data
         try:
@@ -93,42 +94,40 @@ class OrderList(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)      
 
 
+#gets the code sent on POST and returns the details of order
 class orderByCode(APIView):
     
     def post(self, request, format=None):
-        #import ipdb; ipdb.set_trace()
         data = request.data
         try:
             receivedData = data["code"]
         except:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
-        # receivedData = request.data["code"]
+            return Response(status=status.HTTP_400_BAD_REQUEST)     
         if validateCode(receivedData) == False:
             return Response(status=status.HTTP_400_BAD_REQUEST)
         tup = validateCode(receivedData)
         meniu = Menu.objects.get(pk=tup[0])
         comanda = Order.objects.get(pk=tup[1])
-        serializer = CodeSerializer(meniu)
-        
+        serializer = CodeSerializer(meniu)      
         dateResponse = serializer.data
         dateResponse["status"] = comanda.status
         return Response(dateResponse, status=status.HTTP_200_OK)
 
+
+#sets the rating of the order at the value that is sent.
 class updateRating(APIView):
 
     def post(self, request, format=None):
-        #import ipdb; ipdb.set_trace()
         try:
             data = request.data["code"]
             receivedRequest = request.data["rating"]
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
-        # data = request.data["code"]
+
         if validateCode(data) == False:
             return Response(status=status.HTTP_400_BAD_REQUEST)
         tup = validateCode(data)
         codOrder = tup[1]
-        # receivedRequest = request.data["rating"]
         selectedOrder = Order.objects.get(pk=codOrder)
         if selectedOrder.status == 2:
             return Response(status=status.HTTP_400_BAD_REQUEST)   
@@ -141,7 +140,6 @@ class updateRating(APIView):
         selectedOrder.rating = request.data["rating"]
         selectedOrder.status = 2
         selectedOrder.save()
-
         return Response(status=status.HTTP_201_CREATED)
     
     
