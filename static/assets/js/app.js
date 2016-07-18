@@ -52,7 +52,7 @@ $('#id_adress').on('input', function() {
 
 
 
-$("#button__submit").click(function(event){
+$("#button__add-order").click(function(event){
 
 var form_data=$("#contact").serializeArray();
 	var error_free=true;
@@ -76,12 +76,31 @@ var form_data=$("#contact").serializeArray();
 });
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
     
-	$('input[type="text"]').focus(function() {
-		$(this).removeClass("valid").addClass("focusField");
+// 	$('input[type="text"]').focus(function() {
+// 		$(this).removeClass("valid").addClass("focusField");
         
-    });
+//     });
+
+// };
+
+$(document).ready(function() {
+	function getRating() {
+
+		var rating = $('.js-rating').attr('data-rating');
+		var i = 0;
+		
+		for(i; i< rating; i++) {
+			$('.star').eq(i).addClass('is-active');
+		}
+
+	}
+
+	getRating();
     
 });
+
+// jquery rating star
+// $(function(){
 

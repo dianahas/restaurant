@@ -1,14 +1,12 @@
-.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
+
+.star {
+	width: 16px;
+	height: 16px;
+	background: #DDD;
+	display: inline-block;
+    background: url("/static/assets/images/rating_star.png") 0 -16px no-repeat;
 }
-.rating > span {
-  display: inline-block;
-  position: relative;
-  width: 1.1em;
-}
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-   content: "\2605";
-   position: absolute;
+
+.star.is-active {
+	background-position: 0 0;
 }
