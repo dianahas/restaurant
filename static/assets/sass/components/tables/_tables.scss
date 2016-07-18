@@ -55,6 +55,8 @@ th:nth-child(3) {
 
 .table__view {
 	width:1148px;
+	font-size:20px;
+
 }
 
 .wrapper__table {
@@ -73,4 +75,11 @@ th:nth-child(3) {
 .tabletwo
 {
 	min-height:300px;
+}
+
+.comanda__href
+{
+
+text-decoration: underline;
+color:black;
 }
