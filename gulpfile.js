@@ -23,7 +23,7 @@ var PATHS = {
   ],
   javascript: [
     'bower_components/jquery/dist/jquery.js',
-    'static/js/**/*.js'
+    'static/assets/js/**/*.js'
   ]
 };
 

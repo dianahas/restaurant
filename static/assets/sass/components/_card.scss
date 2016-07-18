@@ -1,15 +1,18 @@
 .card {
 	background: #FFF;
 	border-radius: 10px;
-	max-width: 603px;
+	max-width: 578px;
 	width: 100%;
-	// SA CITESC
-	box-shadow: 0 1px 5px #C2C2C2;
-	
+	box-shadow: 0 1px 5px #C2C2C2;	
 }
 
-.registration__card
+.card__registration
 {
 	height:930px;
 
+}
+
+.card__verify {
+	height:600px;
+	max-width:700px;
 }

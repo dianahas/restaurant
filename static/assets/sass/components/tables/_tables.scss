@@ -1,15 +1,10 @@
 table {
-
-   box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   min-width:900px;
-  
-  width:100%;
-
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width:1000px;
+	width:100%;
 }
 
-
 th {
-
 	color:white;
 	background-color: #56CF90;
 	font-size:24px;
@@ -17,9 +12,7 @@ th {
 }
 
 tr {
-
 	height:48px;
-	
 }
 
 tbody {
@@ -28,40 +21,25 @@ tbody {
 
 
 td:first-child {
-
 	font-size:26px;
 }
 
 td:nth-child(2) {
-
 	font-size:26px;
 	border-right:none;
-	
-
 }
 
 td:nth-child(3) {
-
 	font-size:26px;
-
 }
-
-th {
-	text-align: justify;
-	
-}
-
 
 th:nth-child(2) {
-
 	border-right:none;
 }
 
 th:nth-child(3) {
-
 	border-right:none;
 }
-
 
 .wrapper {
   	height:1250px; 
@@ -69,40 +47,30 @@ th:nth-child(3) {
   	white-space:nowrap;
  	max-width:100%;
 }
+
 .content {
     overflow-x:auto;
 	overflow-y:hidden;
 }
 
-.tableone
+.table__view {
+	width:1148px;
+}
+
+.wrapper__table {
+    max-width:1168px;
+    max-height:900px;
+    width:100%;
+}
+
+.wrapper__menu
 {
-	
-	
+	margin:60px auto 0 !important;
 
-}
-
-table.tableone th {
 	
 }
 
-table.tableone td {
-	
-}
-
-.tabletwo{
-	
-	
-}
-
-.table__daily
-{	
-		
-	
-	
-
-}
-
-.table__view
+.tabletwo
 {
-	width:1168px;
+	min-height:300px;
 }

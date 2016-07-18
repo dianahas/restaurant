@@ -9,50 +9,34 @@
 {% block content %}
 
   <main class="page-content">
+    <section class="page page-register wrapper gradient__ciorba ">
+      <div class="content">
+        <div class = "wrapper__table wrapper__menu">
+          <table class ="table__view">
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Titlu</th> 
+                  <th>Actiuni</th>
+                </tr>
+              </thead>
 
-   
-
-<section class="page page-register wrapper gradienttwo ">
- <div class="content">
-
- 
- <div class = "wrapper__table__view">
-        <table class ="table__view">
-         
-    
-          <thead>
-            <tr>
-              <th>Data</th>
-              <th>Titlu</th> 
-              <th>Actiuni</th>
-            </tr>
-         </thead>
-
-    {%for m in menu %}
+                {%for m in menu %}
        
-             <tbody>
-    <tr>
-      <td>{{m.datta}}</td>
-      <td>{{m.title}}</td> 
-               <td><a class ="button--state-success form__button order__button stylizing" href = "{% url 'orders_by_menu' m.pk %}" > Vizualizare </a> </td>
-    </tr>
-              
-            </tr>
-        
-          </tbody>
+           
+                <tr>
+                  <td>{{m.datta}}</td>
+                  <td>{{m.title}}</td> 
+                  <td><a class ="button--state-success form__button form__order__button link--style" href = "{% url 'orders_by_menu' m.pk %}" > Vizualizare </a> </td>
+                </tr>     
 
-    {%endfor%}
-
-        </table>
-</div>
+                {%endfor%}
+    
+          </table>
+        </div>
       </div>
-
     </section>
-
   </main>
-  
-</div>
- 
 
 {% endblock %}
 

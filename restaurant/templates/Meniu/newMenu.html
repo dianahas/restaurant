@@ -7,48 +7,50 @@
 {% block content %}
 
 
-<div class = "content--menu">
+<div class = "content-base">
   <main class="page-content">
-    <section class="page page-register gradientone">
-     <div class="content">
+    <section class="gradient--addmenu">
+      <div class="content">
 
-      <article class="card">
-        <form class="form" action="" method="post">
+        <article class="card">
+          <form class="form" action="" method="post">
 
-             {% csrf_token %}
+            {% csrf_token %}
 
-          <div class="form__group">
-            <input type="text" id="id_title" maxlength="200" name="title"  class="form__input form__component form__inputformtwo" placeholder="Titlu">
+              <div class="form__group form__group__two ">
+                <input type="text" id="id_title" maxlength="200" name="title"  class="form__input form__component form__inputformtwo " placeholder="Titlu">
                      
-          </div>
+              </div>
     
-          <div class="form__group">
-            <input type="text" id="id_datta" name="datta" class="form__input form__component form__inputformtwo" placeholder="Data">
+              <div class="form__group form__group__two">
+                <input type="text" id="id_datta" name="datta" class="form__input form__component form__inputformtwo" placeholder="Data">
 
-          </div>
+              </div>
  
-          <div class="form__group">
-            <input type="text" id="id_fel1" maxlength="200" name="fel1"  class="form__input form__component form__inputformtwo" placeholder="Felul I">
+              <div class="form__group form__group__two ">
+                <input type="text" id="id_fel1" maxlength="200" name="fel1"  class="form__input form__component form__inputformtwo" placeholder="Felul I">
 
-          </div>
+              </div>
 
-          <div class="form__group">
-            <input type="text" id="id_fel2" maxlength="200" name="fel2" class="form__input form__component  form__inputformtwo" placeholder="Felul II">
+              <div class="form__group">
+                <input type="text" id="id_fel2" maxlength="200" name="fel2" class="form__input form__component  form__inputformtwo" placeholder="Felul II">
             
-          </div>
+              </div>
 
-          <div class="form__group">
-            <input type="text" id="id_desert" maxlength="200" name="desert"  class="form__input form__component form__inputformtwo" placeholder="Felul III">
+              <div class="form__group form__group__two">
+                <input type="text" id="id_desert" maxlength="200" name="desert"  class="form__input form__component form__inputformtwo" placeholder="Felul III">
               
-          <button type="submit" class="form__button">Send</button>
+              <button type="submit" class="form__button--color  form__button  ">Send</button>
 
-          </div>
+              </div>
     
     
-        </form>
+          </form>
       
-      </article>
-    
+        </article>
+
+      </div>
+      
     </section>
     
   </main>

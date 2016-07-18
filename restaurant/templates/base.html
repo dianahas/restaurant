@@ -3,65 +3,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-
-  
-    <title>People @ASSIST</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="{% static 'dist/assets/css/app.css' %}">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>People @ASSIST</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <script src="{% static 'dist/assets/js/app.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'dist/assets/css/app.css' %}">
 </head>
 
 <body>
-<div class = "menu">
-<div class ="alignment"> 
-<a class ="img__logo" href="register.html"></a>
-<div class="dropdown">
+  <div class = "header">
+    <div class ="alignment"> 
+      <a class ="header__img-logo" href="http://localhost:8000/meniu/"></a>
+      <div class="header__dropdown dropdown">
+        <button class="dropdown__button"><div class="dropdown__menu"><p class="dropdown__menu-name" >Menus</p></div></button>
+        <div class="dropdown__content">
+          <a href="http://localhost:8000/meniu/">Add Menu</a>
+          <a href="http://localhost:8000/meniu/view-menu/">View orders</a>
+          <a href="http://localhost:8000/meniu/view-daily">Add Order</a>
+          <a href="http://localhost:8000/order/check_code">Check order</a>
+        </div>
+      </div>
+    </div>
 
-<button class="menu__drop__button"><div class="menu__dropdown"></div></button>
+    <div class="header__user">
+      <p class="header__welcome">Hello, David Alexandr</p>
+        <div class="header__img-account">
+        </div>
+    </div>
 
-
-  <div class="dropdown-content">
-     
-      <a href="http://localhost:8000/meniu/">Add Menu</a>
-      <a href="http://localhost:8000/meniu/view-menu/">View orders</a>
-      <a href="http://localhost:8000/meniu/view-daily">Add Order</a>
-      <a href="http://localhost:8000/order/check_code">Check order status</a>
   </div>
 
-</div>
 
-</div>
-
-  <div class="menu__user">
-  <p class="p__welcome">Hello, David Alexandr</p>
-  <div class="img__account"></div>
-  </div>
-<div class="menu-content">
-
-      <a href="http://localhost:8000/meniu/">Add Menu</a>
-      <a href="http://localhost:8000/meniu/view-menu/">View orders</a>
-      <a href="http://localhost:8000/meniu/view-daily">Add Order</a>
-       <a href="http://localhost:8000/order/check_code">Check order status</a>
-  </div>
-</div>
-
-
-
-
-  <script src="{% static 'dist/assets/js/app.js' %}"></script>
-<div class="content--menu">
-{% block content %}
- {% endblock %}
-</div>       
+  
+  <div class="content-base">
+  {% block content %}
+   {% endblock %}
+  </div>       
    
 </body>
 
-
 <footer>
-<p class="copyright">  Copyright 2016. The Archers</p>
+  <p class="footer__copyright">Copyright 2016. The Archers</p>
 </footer>
 
 </html>

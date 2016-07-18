@@ -3,76 +3,58 @@
 {% block content %}
 
 
-<div class="content--menu">
-  <main class="page-content">
-    <section class="page page-register gradienthree">
-     <div class="content">
+  <div class="content--menu">
+    <main class="page-content">
+      <section class="page page-register gradient--addmenu">
+        <div class="content">
 
-      <article class="card registration__card">
-        <form class="form" action="" method="post">
-           {% csrf_token %}
-          <div class="form__group">
-            <label class="form__label form__component">
-              Name
-            </label>
-            <input type="text"  id="id_name" maxlength="200" name="name"  class="form__input form__component js-form-input "  minlength="3"   required pattern="[A-Za-z]+" /> 
-           
-       
+          <article class="card registration__card">
+            <form class="form" action="" method="post" id="contact">
+              {% csrf_token %}
+              <div class="form__group">
 
-          </div><!-- /form group -->
+                <label for ="id_name" class="form__label form__component"> Name </label>
+                <input type="text"  id="id_name" maxlength="200" name="name"  class="form__input form__component js-form-input "  minlength="3"   required pattern="[A-Za-z]+" /> 
+                <span class="error">This field is required</span>
+              </div><!-- /form group -->
     
-          <div class="form__group">
-            <label class="form__label form__component">
-              Email
-            </label>
-           <input type="email" id="id_email" maxlength="254" name="email" class="form__input form__component js-form-input" required pattern ="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" onfocusout="myFunction()"  />
-      
-          </div><!-- /form group -->
+              <div class="form__group">
+
+                <label for="id_email" class="form__label form__component">Email</label>
+                <input type="email" id="id_email" maxlength="254" name="email" class="form__input form__component js-form-input" required pattern ="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  />
+                <span class="error">A valid email address is required</span>        
+              </div><!-- /form group -->
     
-    <div class="form__group">
+              <div class="form__group">
             
-      {{ form.id_menu }}
-</div>
+                {{ form.id_menu }}
 
+              </div>
 
-          <div class="form__group">
-            <label class="form__label form__component">
-              Phone Number
-            </label>
-         <input type="text" id="id_phone" maxlength="15" name="phone" class="form__input form__component js-form-input"  minlength="7" />
-
-   
+              <div for="id_phone" class="form__group">
+                <label class="form__label form__component"> Phone Number</label>
+                <input type="text" id="id_phone" maxlength="15" name="phone" class="form__input form__component js-form-input" required patter ="[[0-9]+"  minlength="9" />
+                <span class="error">A valid phone number is required</span>         
+              </div><!-- /form group -->
     
+              <div class="form__group">
 
-          </div><!-- /form group -->
-    
-
-
-
-
-
-
-          <div class="form__group">
-            <label class="form__label form__component">
-              Address
-            </label>
-            <input type="text"  id="id_adress" maxlength="200" name="adress"  class="form__input form__component js-form-input" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{5,12}$"  minlength ="6"  />
-            
+                <label for="id_adress" class="form__label form__component">Address </label>
+                <input type="text"  id="id_adress" maxlength="200" name="adress"  class="form__input form__component js-form-input" required pattern="^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$"  minlength ="6"  />
+                <span class="error">A valid email is required</span>         
+              </div>
 
               <div id ="contact_submit">
-            <button type="submit" class="form__button"  >Send
-            </button>
-    </div>
-          </div><!-- /form group -->
-    
-         
-    
-        </form>
 
-      </article>
-    </section>
-  </main><!-- /page content -->
+                <button type="submit" class="form__button button__submit "  >Send
+                </button>
 
-</div>
+              </div>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main><!-- /page content -->
+  </div>
 
 {% endblock %}
